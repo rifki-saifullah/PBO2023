@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import Frame, Label, Entry, Button, Radiobutton, ttk, VERTICAL, YES, BOTH, END, Tk, StringVar, messagebox
-from Perawat import Perawat
+from Perawat import Perawat  # Ubah Mahasiswa menjadi Perawat
 
 class FormPerawat:
 
@@ -34,6 +34,10 @@ class FormPerawat:
         self.L.select()
         self.P = Radiobutton(mainFrame, text='Perempuan', value='P', variable=self.txtJK)
         self.P.grid(row=3, column=1, padx=5, pady=5, sticky=tk.W)
+
+        # Button Cari
+        self.btnCari = Button(mainFrame, text='Cari', command=self.onCari, width=10)
+        self.btnCari.grid(row=3, column=3, padx=5, pady=5)
 
         # Button
         self.btnSimpan = Button(mainFrame, text='Simpan', command=self.onSimpan, width=10)
@@ -96,7 +100,6 @@ class FormPerawat:
             messagebox.showwarning("showwarning", "Data Tidak Ditemukan")
             self.ditemukan = False
             self.txtNama.focus()
-        return res
 
     def TampilkanData(self, event=None):
         nip = self.txtNIP.get()  # Ganti nim menjadi nip
