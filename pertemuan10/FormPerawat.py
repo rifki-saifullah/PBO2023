@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import Frame, Label, Entry, Button, Radiobutton, ttk, VERTICAL, YES, BOTH, END, Tk, StringVar, messagebox
-from Perawat import Perawat  # Ubah Mahasiswa menjadi Perawat
+from Perawat import Perawat
 
 class FormPerawat:
 
